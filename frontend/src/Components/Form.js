@@ -14,7 +14,6 @@ const Form = () => {
           try {
 
             const response = await axios.get('http://localhost:4000/api/v1/user/get-categories');
-            console.log(response);
             if(!response.data.success)
             {
               throw new Error('not able to do');
@@ -55,7 +54,6 @@ const Form = () => {
       console.log(formData);
       const toastid = toast.loading('loading....');
       try {
-
         const response = await axios.post('http://localhost:4000/api/v1/user/add-request',formData);
         if(!response.data.success)
         {
