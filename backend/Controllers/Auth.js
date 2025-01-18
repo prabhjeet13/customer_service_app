@@ -13,7 +13,7 @@ exports.googleCallbackControll = (req, res) => {
     }
     const token = jwt.sign(payload, process.env.JWT_SECRET,{ expiresIn: '1d' });
     
-    res.redirect(`http://localhost:3000/request-form/${req.user.id}/${req.user.email}/${token}`);
+    res.redirect(`https://customer-service-app-eight.vercel.app/request-form/${req.user.id}/${req.user.email}/${token}`);
 
   } catch (error) {
     res.status(500).json({ 
