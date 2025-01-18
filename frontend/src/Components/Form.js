@@ -13,7 +13,8 @@ const Form = () => {
           const toastid = toast.loading('loading....');
           try {
 
-            const response = await axios.get('http://localhost:4000/api/v1/user/get-categories');
+            // const response = await axios.get('http://localhost:4000/api/v1/user/get-categories');
+            const response = await axios.get('https://customer-service-app-z8n9.onrender.com/api/v1/user/get-categories');
             if(!response.data.success)
             {
               throw new Error('not able to do');
@@ -54,7 +55,8 @@ const Form = () => {
       console.log(formData);
       const toastid = toast.loading('loading....');
       try {
-        const response = await axios.post('http://localhost:4000/api/v1/user/add-request',formData);
+        // const response = await axios.post('http://localhost:4000/api/v1/user/add-request',formData);
+        const response = await axios.post('https://customer-service-app-z8n9.onrender.com/api/v1/user/add-request',formData);
         if(!response.data.success)
         {
           throw new Error('not able to do');

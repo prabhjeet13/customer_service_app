@@ -6,7 +6,8 @@ const Login = () => {
   const loginHandler = async () => {
     const toastid = toast.loading('Waiting...');
     try {
-      window.location.href = 'http://localhost:4000/api/v1/auth/google';
+      // window.location.href = 'http://localhost:4000/api/v1/auth/google';
+      window.location.href = 'https://customer-service-app-z8n9.onrender.com/api/v1/auth/google';
     } catch (error) {
       toast.error('Server down, try again later');
     }
