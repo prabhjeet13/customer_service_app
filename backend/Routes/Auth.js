@@ -4,7 +4,7 @@ const router = express.Router();
 const passport = require('passport');
 const {googleCallbackControll} = require('../Controllers/Auth');
 
-const REDIRECT_URI = 'http://localhost:4000/api/v1/auth/google/callback';
+const REDIRECT_URI = 'https://customer-service-app-z8n9.onrender.com/api/v1/auth/google/callback';
 // router.get('/google',passport.authenticate('google',{scope:['profile','email']}));
 router.get('/google',
     (req,res) => {
