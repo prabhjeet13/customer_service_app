@@ -52,7 +52,7 @@ const Form = () => {
       }
       const categoryFind = cat.find((c) => c.name === formData.category);
       formData.category = categoryFind._id;
-      console.log(formData);
+      // console.log(formData);
       const toastid = toast.loading('loading....');
       try {
         // const response = await axios.post('http://localhost:4000/api/v1/user/add-request',formData);
